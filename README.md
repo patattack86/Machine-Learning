@@ -1,5 +1,4 @@
 # hello-world
 first repository
 
-#doing this using python syntax
-print("Hello World") 
+#just learning how to use this sight, I plan to post my progress as I work on my Thesis
