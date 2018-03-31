@@ -1,4 +1,2 @@
-# hello-world
-first repository
-
-#just learning how to use this sight, I plan to post my progress as I work on my Thesis
+# Starting out with classification methods, then moving into clustering.  
+All this is for my thesis, hope to implement these techniques on personal data. 
