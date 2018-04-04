@@ -10,6 +10,14 @@ from sklearn.decomposition import PCA
 #reading in some thesis data
 data = pd.read_csv("F:/Thesis/Pandas_csv/All_data.csv", sep = ",")
 
+#setting the data up for the algorithm
+mldata = data[['TSS', 'TP', 'Chl-conc', 'Zone']]
+
+mldata = mldata.dropna()
+
+X = mldata[['TSS', 'TP']]
+
+y = mldata['Zone']
 
 #I only have three targets, which are the three different zones that we sampled in. I am trying to predict which zone we sampled in based 
 on the values of the parameters at a sampling point, there are 26 sampling points total, in three different zones. 
