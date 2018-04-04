@@ -28,3 +28,12 @@ kmeans = KMeans(n_clusters=3, random_state = 5)
 kmeans.fit(X)
 
 #plotting our model output
+
+
+#this first scatter plot is colored according to the actual species labels, we will use this to compare with the predict species labels
+color_theme = np.array(['green', 'blue', 'red'])
+plt.subplot(1,2,1)
+
+plt.scatter(x=mldata.TP, y=mldata.TSS, c=color_theme[mldata.Zone])
+
+plt.title
