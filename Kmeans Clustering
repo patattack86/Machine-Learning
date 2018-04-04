@@ -1,0 +1,16 @@
+I am applying unsupervised machine learning methods onto my thesis dataset, I have three targets and three parameters 
+which we will use to estimate the targets.  
+
+
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+from sklearn.decomposition import PCA
+
+#reading in some thesis data
+data = pd.read_csv("F:/Thesis/Pandas_csv/All_data.csv", sep = ",")
+
+
+#I only have three targets, which are the three different zones that we sampled in. I am trying to predict which zone we sampled in based 
+on the values of the parameters at a sampling point, there are 26 sampling points total, in three different zones. 
+kmeans = kmeans(n_clusters=3)
