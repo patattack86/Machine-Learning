@@ -44,3 +44,8 @@ kmeans fit model
 plt.subplot(1,2,2)
 plt.scatter(x=mldata.TP, y=mldata.TSS, c=color_theme[kmeans], s=50)
 plt.title('K-Means Estimation Classification')
+
+
+#Next step is to evaluate the model to assess performance accuracy.  
+print(classification_report(y, X)
+
