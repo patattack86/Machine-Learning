@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+from mpl_toolkits.mplot3d import Axes3d
+import pandas as pd
+import numpy as np
+
+data = pd.read("Filepath")
+
+mldata = data[['TSS', 'TP', 'Chl-Conc']]
+
+X = mldata.dropna()
+
+#Initiating Kmeans instance
