@@ -41,9 +41,22 @@ plt.title('Ground Truth Classification')
 #the difference between these plots is that the colors will be applied according to what we estimated through our
 kmeans fit model
 
-plt.subplot(1,2,2)
-plt.scatter(x=mldata.TP, y=mldata.TSS, c=color_theme[kmeans], s=50)
-plt.title('K-Means Estimation Classification')
+y = mldata['Chl-Conc']
+x = mldata['TP']
+zone = mldata2['Zone']
+
+fig=plt.figure(figsize = (10,10))
+ax = plt.gca()
+plt.scatter(x , y, c=color_theme[clustering.labels_],  s=50)
+plt.ylabel('Chl-a', fontsize = 20)
+plt.xlabel('Total Phosphorus', fontsize = 20)
+plt.title('K-Means Cluster Analysis', fontsize = 25)
+ax.tick_params(labelsize = 15)
+
+for i, txt in enumerate(zone):
+    ax.annotate(txt, (x[i],y[i]))
+    
+plt.show()
 
 
 #Next step is to evaluate the model to assess performance accuracy.  
